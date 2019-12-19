@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-back-button defaultHref="/home">
+      </ion-back-button>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list line = "full">
+
+    <ion-item>
+      <ion-input required type="text" placeholder="Name" [(ngModel)]="todo.nameItem"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input required type="text" placeholder="Note" [(ngModel)]="todo.note"></ion-input>
+    </ion-item>
+    <p align="center"><img src="{{todo.imageUrl}}"></p>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <ion-button  color="success" size="full" (click)="takePhoto()">Camera</ion-button>
+        </ion-col>
+        <ion-col col-4>
+          <ion-button  color="success" size="full" (click)="selectPhoto()">Library</ion-button>
+        </ion-col>
+        <ion-col col-4>
+          <ion-button  color="success" size="full" (click)="removePhoto()">Remove</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-list>
+  <ion-button expand="full" (click)="saveTodo()">Save</ion-button>
+</ion-content>
+

@@ -1,0 +1,7 @@
+{
+  "name": "manageitem",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
